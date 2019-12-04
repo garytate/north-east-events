@@ -13,3 +13,11 @@ $color_secondary: #364652;
   font-family: $primary_font;
   font-size: 40px;
 }
+
+p,
+h1,
+h2,
+h3,
+a {
+  color: $color_primary;
+}
