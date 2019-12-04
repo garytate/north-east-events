@@ -1,5 +1,4 @@
 window.onload = function eventShowcase() {
-  console.log('Hello World');
   document.getElementById('events').innerHTML =
     "<div class='event-card'><p>Hello</p></div>";
 };
@@ -9,7 +8,8 @@ fetch('../json/events.json')
     return response.json();
   })
   .then(function(data) {
-    for (const event in data) {
-      console.log(data[event]);
+    var _data = data.events;
+    for (var i = 0; i < _data.length; i++) {
+      console.log(_data[i].name);
     }
   });
