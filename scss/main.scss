@@ -1,3 +1,15 @@
-body {
-  background-color: blue;
+/* Main Stylesheet */
+
+/* Font Variables */
+$primary_font: 'Roboto', sans-serif;
+
+/* Color Palette Variables */
+$color_primary: #dcedff;
+$color_secondary: #364652;
+
+/* Global Styles */
+* {
+  background-color: $color_secondary;
+  font-family: $primary_font;
+  font-size: 40px;
 }
