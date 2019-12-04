@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Go Karting",
+      "desc": "Join in the Go Karting team in the north east!",
+      "price": "£29.99"
+    },
+    {
+      "id": 2,
+      "name": "Kung Fu",
+      "desc": "Learn the basics & advanced techniques of Kung Fu!",
+      "price": "£39.99"
+    },
+    {
+      "id": 3,
+      "name": "Bowling Night",
+      "desc": "Every Saturday, our local team goes out to play!",
+      "price": "£7.99"
+    }
+  ]
+}
