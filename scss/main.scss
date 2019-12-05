@@ -4,12 +4,11 @@
 $primary_font: 'Roboto', sans-serif;
 
 /* Color Palette Variables */
-$color_primary: #dcedff;
-$color_secondary: #364652;
+$color_primary: #ee6c4d;
+$color_secondary: #44344f;
 
 /* Global Styles */
-* {
-  background-color: $color_secondary;
+body {
   font-family: $primary_font;
   font-size: 15px;
   line-height: 1.5;
@@ -17,15 +16,53 @@ $color_secondary: #364652;
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Used throughout the website to
+   hold the web page in the middle. */
 .container {
   width: 80%;
   margin: auto;
+  overflow: hidden;
 }
 
-p,
-h1,
-h2,
-h3,
-a {
+header {
+  background-color: $color_secondary;
   color: $color_primary;
+  padding-top: 20px;
+  min-height: 80px;
+  text-transform: uppercase;
+}
+
+header a {
+  color: $color_primary;
+  text-decoration: none;
+}
+
+header .title {
+  font-size: 22px;
+  float: left;
+}
+
+header .title h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 18px;
+}
+
+header li {
+  font-size: 20px;
+  display: inline;
+  padding: 0 5px 0 5px;
+}
+
+header a:hover,
+.current {
+  color: white;
 }
