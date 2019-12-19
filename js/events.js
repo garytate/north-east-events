@@ -11,8 +11,9 @@ window.onload = function eventShowcase() {
           `<div class="event-card">
             <img src=${_data[i].image}>
             <h1>${_data[i].name}</h1>
-            <p>${_data[i].desc}</p>
-            <p>${_data[i].price}</p>
+            <p id="card-description">${_data[i].desc}</p>
+            <p id="card-price">${_data[i].price}</p>
+            <button type="submit" class="order-button">BUY NOW</button>
           </div>`
         );
       }
