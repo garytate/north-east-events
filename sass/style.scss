@@ -209,6 +209,12 @@ footer {
   background-color: $color_primary;
 }
 
+.seperator {
+  min-height: 1px;
+  max-height: 1px;
+  background-color: black;
+}
+
 footer p {
   color: white;
   padding: 10px 0 10px 0;
