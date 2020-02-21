@@ -135,7 +135,6 @@ button {
   text-align: center;
   min-height: 50px;
   width: 90%;
-  background-color: #aaaaaa;
   color: black;
   margin: 10px;
 }
@@ -154,12 +153,9 @@ button {
   padding: 10px;
 }
 
-.event-card #card-description {
-  font-size: 18px;
-  min-height: 100px;
-  @media screen and (max-width: $single-card) {
-    font-size: 24px;
-  }
+.event-card {
+    min-height: 100px;
+    background-color: white;
 }
 
 .event-card #card-price {
@@ -193,6 +189,23 @@ button {
 .event-card img {
   width: 100%;
   padding: 0;
+}
+
+.category {
+  background-color: red;
+  width: 5%;
+  color: white;
+}
+
+.event-card h1 {
+  font-size: 30px;
+  margin-left:-10px;
+}
+
+.category p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10px;
 }
 
 footer {

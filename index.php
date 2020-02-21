@@ -105,14 +105,28 @@ Maintained by Gary Tate (W17001980)
                 or die("rip"); 
 
                 $sql = "SELECT * FROM nee_events";
-                $output = $dbhandle->query($sql);
+                $event_query = $dbhandle->query($sql);
 
-                if ($output->num_rows > 0) {
-                    while ($row = $output->fetch_assoc()) {
+                if ($event_query->num_rows > 0) {
+                    while ($row = $event_query->fetch_assoc()) {
+
+                        $category_title = "Unknown";
+
+                        $category = $row['catID'];
+                        $query = "SELECT * FROM nee_category";
+                        $category_query = $dbhandle->query($query);
+                        if ($category_query->num_rows > 0) {
+                            while ($second_row = $category_query->fetch_assoc()) {
+                                if ($second_row['catID'] == $category) {
+                                    $category_title = $second_row['catDesc'];
+                                }
+                            }
+                        }
+
                         echo '<div class="event-card">';
                         echo "<h1>" . $row['eventTitle'] . "</h1>";
+                        echo '<div class="category">' .  '<p>' . $category_title . '</p></div></div>';
                         echo "<p>" . $row['eventDescription'] . "</p>";
-                        echo '</div>';
                     }
                 }
 
