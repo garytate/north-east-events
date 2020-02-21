@@ -45,9 +45,9 @@ Maintained by Gary Tate (W17001980)
             <nav>
                 <!-- Navigation Unordered List -->
                 <ul>
-                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="index.php" class="current">Home</a></li>
                     <li><a href="#">Events</a></li>
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="admin.php">Admin</a></li>
                     <li><a href="#">Credits</a></li>
                     <li><a href="./assets/pdf/Web Dev Assignment 1.pdf">Design</a></li>
                     <li><a href="https://github.com/garytate/north-east-events"><i class="fab fa-github"></i></a></li>

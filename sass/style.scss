@@ -205,6 +205,26 @@ button {
   font-size: 10px;
 }
 
+.current {
+  color: blue;
+}
+
+.newrecord {
+  background-color: white;
+  width: 30%;
+  align-content: center;
+  margin: auto;
+}
+
+.newrecord p {
+  padding: 10px 0 0 10px;
+  color: $color_primary;
+}
+
+.newrecord input {
+  margin-left: 10px;
+}
+
 footer {
   background-color: $color_primary;
 }
