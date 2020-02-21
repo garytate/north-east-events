@@ -2,9 +2,9 @@
 
 return array(
     'host' => 'localhost',
-    'user' => 'username',
-    'pass' => 'password',
-    'data' => 'database'
+    'user' => 'gary',
+    'pass' => '4yzrX3zvryKybMgc',
+    'data' => 'unn_w17001980'
 )
 
 ?>
