@@ -1,0 +1,207 @@
+/* Main Stylesheet */
+
+
+/* Font Variables */
+$primary_font: 'Roboto', sans-serif;
+
+/* Color Palette Variables */
+$color_primary: #ee6c4d;
+$color_secondary: #44344f;
+
+/* Responsive Design */
+$small-width: 560px;
+$centered-width: 1125px;
+$single-card: 800px;
+
+/* Global Styles */
+body {
+  background-color: black;
+  font-family: $primary_font;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Used throughout the website to
+   hold the web page in the middle. */
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background-color: $color_primary;
+  color: white;
+  padding-top: 20px;
+  min-height: 80px;
+  text-transform: uppercase;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header .title {
+  font-size: 22px;
+  float: left;
+  @media screen and (max-width: $centered-width) {
+    float: none;
+    text-align: center;
+  }
+}
+
+header .title h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 18px;
+  @media screen and (max-width: $centered-width) {
+    float: none;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+header li {
+  font-size: 20px;
+  display: inline;
+  padding: 0 5px 0 5px;
+}
+
+header a:hover,
+.current {
+  color: white;
+}
+
+.search {
+  background: white;
+}
+
+.splash {
+  text-align: center;
+  background-image: url('../assets/img/festival.jpg');
+  color: white;
+}
+
+.splash h2 {
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  padding: 0 0 150px 0;
+}
+
+.splash h1 {
+  padding: 150px 0 0 0;
+  margin: 0;
+  font-size: 80px;
+}
+
+.search {
+  text-align: center;
+  padding: 40px 0 40px 0;
+  background: $color_primary;
+  font-size: 30px;
+}
+
+.search #searchText {
+  color: white;
+}
+
+.search input,
+button {
+  font-size: 30px;
+}
+
+.event-showcase {
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-card {
+  border-collapse: separate;
+  align-content: center;
+  text-align: center;
+  min-height: 50px;
+  width: 90%;
+  background-color: #aaaaaa;
+  color: black;
+  margin: 10px;
+}
+
+.event-card h1 {
+  font-size: 1.3em;
+  text-align: left;
+  padding: 10px 0 0 10px;
+  text-transform: uppercase;
+}
+
+.event-card p {
+  width: 80%;
+  margin-top: -20px;
+  text-align: left;
+  padding: 10px;
+}
+
+.event-card #card-description {
+  font-size: 18px;
+  min-height: 100px;
+  @media screen and (max-width: $single-card) {
+    font-size: 24px;
+  }
+}
+
+.event-card #card-price {
+  font-size: 20px;
+  color: $color_primary;
+  margin-top: -10px;
+
+  margin-bottom: 10px;
+}
+
+.event-card button {
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: $color_primary;
+  color: white;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid $color_primary;
+  padding: 1rem 4rem 1rem 4rem;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.event-card button:hover {
+  color: $color_primary;
+  border: 2px solid $color_primary;
+}
+
+.event-card img {
+  width: 100%;
+  padding: 0;
+}
+
+footer {
+  background-color: $color_primary;
+}
+
+footer p {
+  color: white;
+  padding: 10px 0 10px 0;
+  margin-bottom: 0px;
+  text-align: center;
+}
