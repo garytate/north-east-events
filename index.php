@@ -94,13 +94,15 @@ Maintained by Gary Tate (W17001980)
             -->
 
             <?php
-                $serverName = "localhost";
-                $serverUser = "user";
-                $serverPass = "password";
-                $serverDB = "events";
+
+                $config = include('config.php');
+                $serverName = $config['host'];
+                $serverUser = $config['user'];
+                $serverPass = $config['pass'];
+                $serverDB   = $config['data'];
 
                 $dbhandle = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB)
-                or die("Couldn't connect to SQL Server on $myServer"); 
+                or die("rip"); 
 
                 $sql = "SELECT * FROM nee_events";
                 $output = $dbhandle->query($sql);
