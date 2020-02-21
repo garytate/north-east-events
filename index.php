@@ -111,6 +111,7 @@ Maintained by Gary Tate (W17001980)
                     while ($row = $event_query->fetch_assoc()) {
 
                         $category_title = "Unknown";
+                        $location_title = "Unknown";
 
                         $category = $row['catID'];
                         $query = "SELECT * FROM nee_category";
@@ -123,10 +124,21 @@ Maintained by Gary Tate (W17001980)
                             }
                         }
 
+                        $location = $row['venueID'];
+                        $query = "SELECT * FROM nee_venue";
+                        $location_query = $dbhandle->query($query);
+                        if ($location_query->num_rows > 0) {
+                            while ($second_row = $location_query->fetch_assoc()) {
+                                if ($second_row['venueID'] == $location) {
+                                    $location_title = $second_row['location'];
+                                }
+                            }
+                        }
+
                         echo '<div class="event-card">';
                         echo "<h1>" . $row['eventTitle'] . "</h1>";
-                        echo '<div class="category">' .  '<p>' . $category_title . '</p></div></div>';
-                        echo "<p>" . $row['eventDescription'] . "</p>";
+                        echo '<div class="category">' .  '<p>' . $category_title . ' | ' . $location_title . '</p></div>';
+                        echo "<p>" . $row['eventDescription'] . "</p></div><div class=\"seperator\"></div>";
                     }
                 }
 
