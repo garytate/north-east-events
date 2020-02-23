@@ -112,6 +112,7 @@ Maintained by Gary Tate (W17001980)
 
                         $category_title = "Unknown";
                         $location_title = "Unknown";
+                        $date_title     = "Unknown";
 
                         $category = $row['catID'];
                         $query = "SELECT * FROM nee_category";
@@ -135,9 +136,19 @@ Maintained by Gary Tate (W17001980)
                             }
                         }
 
+                        $query = "SELECT * FROM nee_events";
+                        $date_query = $dbhandle->query($query);
+                        if ($date_query->num_rows > 0) {
+                            while ($second_row = $date_query->fetch_assoc()) {
+                                if ($second_row['eventID'] == $row['eventID']) {
+                                    $date_title = $second_row['eventStartDate'];
+                                }
+                            }
+                        }
+
                         echo '<div class="event-card">';
                         echo "<h1>" . $row['eventTitle'] . "</h1>";
-                        echo '<div class="category">' .  '<p>' . $category_title . ' | ' . $location_title . '</p></div>';
+                        echo '<div class="category">' .  '<p>' . $category_title . ' | ' . $location_title . ' | ' . $date_title . '</p></div>';
                         echo "<p>" . $row['eventDescription'] . "</p></div><div class=\"seperator\"></div>";
                     }
                 }

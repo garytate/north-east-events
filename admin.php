@@ -64,7 +64,7 @@ Maintained by Gary Tate (W17001980)
 				<p>Description:</p> <input type="text" name="desc"><br>
 				<p>Start Date:</p> <input type="date" name="startdate"><br>
 				<p>End Date:</p> <input type="date" name="enddate"><br>
-				<p>Price (£):</p> <input type="number" name="price"><br>
+				<p>Price (£):</p> <input type="number" step="0.01" name="price"><br>
 				<p>Category:</p> N/A
 				<p>Location:</p> N/A
 				<input type="submit">
