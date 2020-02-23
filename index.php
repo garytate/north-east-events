@@ -85,14 +85,7 @@ Maintained by Gary Tate (W17001980)
 
             <?php
 
-                $config = include('config.php');
-                $serverName = $config['host'];
-                $serverUser = $config['user'];
-                $serverPass = $config['pass'];
-                $serverDB   = $config['data'];
-
-                $dbhandle = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB)
-                or die("rip"); 
+                $dbhandle = include('libs/mysqli.php');
 
                 $sql = "SELECT * FROM nee_events";
                 $event_query = $dbhandle->query($sql);
