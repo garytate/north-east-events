@@ -82,16 +82,6 @@ Maintained by Gary Tate (W17001980)
     <!-- Showcase all events -->
     <section class="event-showcase">
         <div class="container" id="events">
-            <!--This is automatically filled by events.js
-                Example of generated div:
-                <div class="event-card">
-                    <img src="../assets/img/go-karting.png">
-                    <h1>Kung Fu</h1>
-                    <p>Learn the basics &amp; advanced techniques of Kung Fu!</p>
-                    <p>£39.99</p>
-                    <button type="submit" class="order-button">Order</button>
-                </div>
-            -->
 
             <?php
 
@@ -129,10 +119,19 @@ Maintained by Gary Tate (W17001980)
                         $result = $dbhandle->query($query)->fetch_array();
                         $date_title = $result[1]; // [eventID, eventStartDate]
 
-                        echo '<div class="event-card">';
-                        echo "<h1>" . $row['eventTitle'] . "</h1>";
-                        echo '<div class="category">' .  '<p>' . $category_title . ' | ' . $location_title . ' | ' . $date_title . '</p></div>';
-                        echo "<p>" . $row['eventDescription'] . "</p></div><div class=\"seperator\"></div>";
+                        $output = 
+                        '<div class="event-card">
+                            <h1>%s</h1>
+                            <div class="category">
+                                <p>%s | %s | %s</p>
+                            </div>
+                            <p>%s</p>
+                        </div>
+                        <div class="seperator">
+                        </div>';
+
+                        echo sprintf($output, $row['eventTitle'], $category_title, $location_title, $date_title, $row['eventDescription']);
+
                     }
                 }
 
@@ -140,7 +139,8 @@ Maintained by Gary Tate (W17001980)
                     echo $dbhandle->error;
                 } 
 
-                ?>
+            ?>
+
         </div>
     </section>
 
