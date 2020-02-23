@@ -14,12 +14,12 @@
 		$serverPass = $config['pass'];
 		$serverDB   = $config['data'];
 
-		$dbhandle = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB)
+		$mysqli = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB)
 		or die("rip"); 
 
 		$query = 'INSERT INTO nee_events (eventTitle, eventDescription, venueID, catID, eventStartDate, eventEndDate, eventPrice) VALUES ("' . $_POST["name"] . '", "' . $_POST["desc"] . '", "v3", "c4", "' . $_POST["startdate"] . '", "' . $_POST["enddate"] . '", "' . $_POST["price"] . '");';
 		echo $query;
-		$run = $dbhandle->query($query);
+		$run = $mysqli->query($query);
 	?>
 </body>
 </html>

@@ -85,10 +85,10 @@ Maintained by Gary Tate (W17001980)
 
             <?php
 
-                $dbhandle = include('libs/mysqli.php');
+                $mysqli = include('libs/mysqli.php');
 
                 $sql = "SELECT * FROM nee_events";
-                $event_query = $dbhandle->query($sql);
+                $event_query = $mysqli->query($sql);
 
                 if ($event_query->num_rows > 0) {
                     while ($row = $event_query->fetch_assoc()) {
@@ -99,17 +99,17 @@ Maintained by Gary Tate (W17001980)
 
                         // Category (Newcastle Theatre)
                         $query = "SELECT catID, catDesc FROM nee_category WHERE catID LIKE '" . $row['catID'] . "'";
-                        $result = $dbhandle->query($query)->fetch_array();
+                        $result = $mysqli->query($query)->fetch_array();
                         $category_title = $result[1]; // [catID, catDesc]
 
                         // Location (Newcastle Upon Tyne)
                         $query = "SELECT venueID, location FROM nee_venue WHERE venueID LIKE '" . $row['venueID'] . "'";
-                        $result = $dbhandle->query($query)->fetch_array();
+                        $result = $mysqli->query($query)->fetch_array();
                         $location_title = $result[1]; // [venueID, location]
 
                         // Date (2020-01-01)
                         $query = "SELECT eventID, eventStartDate FROM nee_events WHERE eventID = " . $row['eventID'];
-                        $result = $dbhandle->query($query)->fetch_array();
+                        $result = $mysqli->query($query)->fetch_array();
                         $date_title = $result[1]; // [eventID, eventStartDate]
 
                         // Render HTML
@@ -131,8 +131,8 @@ Maintained by Gary Tate (W17001980)
                     }
                 }
 
-                if (!$dbhandle->query($sql)) {
-                    echo $dbhandle->error;
+                if (!$mysqli->query($sql)) {
+                    echo $mysqli->error;
                 } 
 
             ?>
