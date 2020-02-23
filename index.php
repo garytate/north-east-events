@@ -114,30 +114,20 @@ Maintained by Gary Tate (W17001980)
                         $location_title = "Unknown";
                         $date_title     = "Unknown";
 
-                        $category = $row['catID'];
-                        $query = "SELECT * FROM nee_category";
-                        $category_query = $dbhandle->query($query);
-                        if ($category_query->num_rows > 0) {
-                            while ($second_row = $category_query->fetch_assoc()) {
-                                if ($second_row['catID'] == $category) {
-                                    $category_title = $second_row['catDesc'];
-                                }
-                            }
-                        }
+                        // Category (Newcastle Theatre)
+                        $query = "SELECT catID, catDesc FROM nee_category WHERE catID LIKE '" . $row['catID'] . "'";
+                        $result = $dbhandle->query($query)->fetch_array();
+                        $category_title = $result[1]; // [catID, catDesc]
 
-                        $location = $row['venueID'];
-                        $query = "SELECT * FROM nee_venue";
-                        $location_query = $dbhandle->query($query);
-                        if ($location_query->num_rows > 0) {
-                            while ($second_row = $location_query->fetch_assoc()) {
-                                if ($second_row['venueID'] == $location) {
-                                    $location_title = $second_row['location'];
-                                }
-                            }
-                        }
+                        // Location (Newcastle Upon Tyne)
+                        $query = "SELECT venueID, location FROM nee_venue WHERE venueID LIKE '" . $row['venueID'] . "'";
+                        $result = $dbhandle->query($query)->fetch_array();
+                        $location_title = $result[1]; // [catID, catDesc]
 
-                        $result = $dbhandle->query("SELECT eventID, eventStartDate FROM nee_events WHERE eventID = " . $row['eventID'])->fetch_array();
-                        $date_title = $result[1];
+                        // Date (2020-01-01)
+                        $query = "SELECT eventID, eventStartDate FROM nee_events WHERE eventID = " . $row['eventID'];
+                        $result = $dbhandle->query($query)->fetch_array();
+                        $date_title = $result[1]; // [eventID, eventStartDate]
 
                         echo '<div class="event-card">';
                         echo "<h1>" . $row['eventTitle'] . "</h1>";
