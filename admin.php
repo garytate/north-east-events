@@ -65,8 +65,33 @@ Maintained by Gary Tate (W17001980)
 				<p>Start Date:</p> <input type="date" name="startdate"><br>
 				<p>End Date:</p> <input type="date" name="enddate"><br>
 				<p>Price (£):</p> <input type="number" step="0.01" name="price"><br>
-				<p>Category:</p> N/A
-				<p>Location:</p> N/A
+				<p>Category:</p> <select name="categories">
+                <?php
+                    $mysqli = include('libs/mysqli.php');
+
+                    $sql = "SELECT catID, catDesc FROM NEE_category";
+                    $query = $mysqli->query($sql);
+                    if ($query->num_rows > 0) {
+                        while ($row = $query->fetch_assoc()) {
+                            echo sprintf("<option value='%s'>%s</option>", $row['catID'], $row['catDesc']);
+                        }
+                    }
+                ?>
+                </select>
+
+				<p>Location:</p> <select name="location">
+                <?php
+                    $mysqli = include('libs/mysqli.php');
+
+                    $sql = "SELECT venueID, venueName FROM NEE_venue";
+                    $query = $mysqli->query($sql);
+                    if ($query->num_rows > 0) {
+                        while ($row = $query->fetch_assoc()) {
+                            echo sprintf("<option value='%s'>%s</option>", $row['venueID'], $row['venueName']);
+                        }
+                    }
+                ?>
+                </select>
 				<input type="submit">
 			</form>
 		</div>

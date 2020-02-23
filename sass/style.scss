@@ -236,6 +236,7 @@ footer {
 }
 
 .seperator {
+  margin-top: 10px;
   min-height: 1px;
   max-height: 1px;
   background-color: black;
@@ -266,7 +267,6 @@ $btn-lh: 3;
 	text-align: center;
 	text-decoration: none;
   text-transform: uppercase;
-  margin: 5px 5px 20px 5px;
   padding: 10px;
   border: none;
 }
