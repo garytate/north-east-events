@@ -122,7 +122,7 @@ Maintained by Gary Tate (W17001980)
                         // Location (Newcastle Upon Tyne)
                         $query = "SELECT venueID, location FROM nee_venue WHERE venueID LIKE '" . $row['venueID'] . "'";
                         $result = $dbhandle->query($query)->fetch_array();
-                        $location_title = $result[1]; // [catID, catDesc]
+                        $location_title = $result[1]; // [venueID, location]
 
                         // Date (2020-01-01)
                         $query = "SELECT eventID, eventStartDate FROM nee_events WHERE eventID = " . $row['eventID'];
