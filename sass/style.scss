@@ -37,7 +37,7 @@ ul {
 }
 
 header {
-  background-color: $color_primary;
+  background-color: $color_secondary;
   color: white;
   padding-top: 20px;
   min-height: 80px;
@@ -78,9 +78,12 @@ header li {
   padding: 0 5px 0 5px;
 }
 
-header a:hover,
 .current {
-  color: white;
+  color: $color_primary;
+}
+
+.navlinks a:hover {
+  color: $color_primary;
 }
 
 .search {
@@ -109,7 +112,7 @@ header a:hover,
 .search {
   text-align: center;
   padding: 40px 0 40px 0;
-  background: $color_primary;
+  background: $color_secondary;
   font-size: 30px;
 }
 
@@ -212,10 +215,6 @@ button {
   padding-bottom: 0;
 }
 
-.current {
-  color: blue;
-}
-
 .newrecord {
   background-color: white;
   width: 30%;
@@ -256,7 +255,6 @@ $btn-w: 12em;
 $btn-lh: 3;
 
 #moreinfo, #buyticks {
-	z-index: 1;
 	width: $btn-w;
 	background: black;
 	color: white;
@@ -265,6 +263,7 @@ $btn-lh: 3;
 	text-decoration: none;
   text-transform: uppercase;
   margin: 5px 5px 20px 5px;
+  border: none;
 }
 
 #buyticks {

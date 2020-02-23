@@ -26,7 +26,19 @@ Maintained by Gary Tate (W17001980)
     <script src="https://kit.fontawesome.com/5c6ddc6d04.js" crossorigin="anonymous"></script>
 
     <!-- Website Title -->
-    <title>North East Events &bull; Welcome</title>
+	<title><?php
+		$config = include('config.php');
+		$serverName = $config['host'];
+		$serverUser = $config['user'];
+		$serverPass = $config['pass'];
+		$serverDB   = $config['data'];
+
+		$dbhandle = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB);
+		$query = "SELECT eventID, eventTitle FROM nee_events WHERE " . $_GET['eventID'] . " = eventID";
+		$result = $dbhandle->query($query)->fetch_array();
+		echo $result[1];
+		?>
+	</title>
 
 </head>
 
