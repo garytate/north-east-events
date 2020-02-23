@@ -136,15 +136,8 @@ Maintained by Gary Tate (W17001980)
                             }
                         }
 
-                        $query = "SELECT * FROM nee_events";
-                        $date_query = $dbhandle->query($query);
-                        if ($date_query->num_rows > 0) {
-                            while ($second_row = $date_query->fetch_assoc()) {
-                                if ($second_row['eventID'] == $row['eventID']) {
-                                    $date_title = $second_row['eventStartDate'];
-                                }
-                            }
-                        }
+                        $result = $dbhandle->query("SELECT eventID, eventStartDate FROM nee_events WHERE eventID = " . $row['eventID'])->fetch_array();
+                        $date_title = $result[1];
 
                         echo '<div class="event-card">';
                         echo "<h1>" . $row['eventTitle'] . "</h1>";
