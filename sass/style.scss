@@ -197,13 +197,19 @@ button {
 
 .event-card h1 {
   font-size: 30px;
-  margin-left:-10px;
-  margin-bottom: 10px;
+  margin: 0px 0px 10px -10px;
+  padding: 10px 10px 0 10px;
+}
+
+.event-card #description {
+  padding: 0;
+  margin: 0;
 }
 
 .category p {
   text-transform: uppercase;
   font-size: 12px;
+  padding-bottom: 0;
 }
 
 .current {
@@ -241,4 +247,26 @@ footer p {
   padding: 10px 0 10px 0;
   margin-bottom: 0px;
   text-align: center;
+}
+
+// https://codepen.io/thebabydino/pen/vQNVQe
+// #moreinfo, buyticks
+
+$btn-w: 12em;
+$btn-lh: 3;
+
+#moreinfo, #buyticks {
+	z-index: 1;
+	width: $btn-w;
+	background: black;
+	color: white;
+	font: 700 1.125em/ #{$btn-lh} trebuchet ms, sans-serif;
+	text-align: center;
+	text-decoration: none;
+  text-transform: uppercase;
+  margin: 5px 5px 20px 5px;
+}
+
+#buyticks {
+  background: $color_secondary;
 }

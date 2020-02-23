@@ -119,14 +119,17 @@ Maintained by Gary Tate (W17001980)
                         $result = $dbhandle->query($query)->fetch_array();
                         $date_title = $result[1]; // [eventID, eventStartDate]
 
+                        // Render HTML
                         $output = 
                         '<div class="event-card">
                             <h1>%s</h1>
                             <div class="category">
                                 <p>%s | %s | %s</p>
                             </div>
-                            <p>%s</p>
+                            <p id="description">%s</p>
                         </div>
+                        <button type="button" id="moreinfo">More Information</button>
+                        <button type="button" id="buyticks">Purchase Tickets</button>
                         <div class="seperator">
                         </div>';
 
