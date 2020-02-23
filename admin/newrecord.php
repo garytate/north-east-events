@@ -8,10 +8,9 @@
 <body>
 	<?php
 
-		$mysqli = include('libs/mysqli.php');
+		$mysqli = include(__DIR__ . '/../libs/mysqli.php');
 
-		$query = 'INSERT INTO nee_events (eventTitle, eventDescription, venueID, catID, eventStartDate, eventEndDate, eventPrice) VALUES ("' . $_POST["name"] . '", "' . $_POST["desc"] . '", "v3", "c4", "' . $_POST["startdate"] . '", "' . $_POST["enddate"] . '", "' . $_POST["price"] . '");';
-		echo $query;
+		$query = 'INSERT INTO NEE_events (eventTitle, eventDescription, venueID, catID, eventStartDate, eventEndDate, eventPrice) VALUES ("' . $_POST["name"] . '", "' . $_POST["desc"] . '", "v3", "c4", "' . $_POST["startdate"] . '", "' . $_POST["enddate"] . '", "' . $_POST["price"] . '");';
 		$run = $mysqli->query($query);
 	?>
 </body>

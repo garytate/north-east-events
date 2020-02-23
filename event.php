@@ -28,8 +28,8 @@ Maintained by Gary Tate (W17001980)
     <!-- Website Title -->
 	<title><?php
 		$mysqli = include('libs/mysqli.php');
-		
-		$query = "SELECT eventID, eventTitle FROM nee_events WHERE " . $_GET['eventID'] . " = eventID";
+
+		$query = "SELECT eventID, eventTitle FROM NEE_events WHERE " . $_GET['eventID'] . " = eventID";
 		$result = $mysqli->query($query)->fetch_array();
 		echo $result[1];
 		?>
@@ -62,7 +62,21 @@ Maintained by Gary Tate (W17001980)
             </nav>
 
         </div>
-    </header>
+	</header>
+	
+	<section class="eventinfo">
+		<div>
+			<?php
+
+				$mysqli = include('libs/mysqli.php');
+
+				$query = "SELECT eventID, eventTitle FROM NEE_events WHERE " . $_GET['eventID'] . " = eventID";
+				$result = $mysqli->query($query)->fetch_array();
+				echo "<p id='words'>" . $result[1] . "</p>";
+
+			?>
+		</div>
+	</section>
 
     <footer>
         <p>North East Events &copy; 2019</p>

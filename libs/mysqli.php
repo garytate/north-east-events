@@ -1,6 +1,6 @@
 <?php
 
-$config = include('__DIRNAME__/../config.php');
+$config = include(__DIR__ . '/../config.php');
 $serverName = $config['host'];
 $serverUser = $config['user'];
 $serverPass = $config['pass'];
