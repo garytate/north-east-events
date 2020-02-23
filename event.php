@@ -27,13 +27,8 @@ Maintained by Gary Tate (W17001980)
 
     <!-- Website Title -->
 	<title><?php
-		$config = include('config.php');
-		$serverName = $config['host'];
-		$serverUser = $config['user'];
-		$serverPass = $config['pass'];
-		$serverDB   = $config['data'];
-
 		$mysqli = include('libs/mysqli.php');
+		
 		$query = "SELECT eventID, eventTitle FROM nee_events WHERE " . $_GET['eventID'] . " = eventID";
 		$result = $mysqli->query($query)->fetch_array();
 		echo $result[1];
