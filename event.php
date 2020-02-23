@@ -33,9 +33,9 @@ Maintained by Gary Tate (W17001980)
 		$serverPass = $config['pass'];
 		$serverDB   = $config['data'];
 
-		$dbhandle = mysqli_connect($serverName, $serverUser, $serverPass, $serverDB);
+		$mysqli = include('libs/mysqli.php');
 		$query = "SELECT eventID, eventTitle FROM nee_events WHERE " . $_GET['eventID'] . " = eventID";
-		$result = $dbhandle->query($query)->fetch_array();
+		$result = $mysqli->query($query)->fetch_array();
 		echo $result[1];
 		?>
 	</title>
