@@ -36,9 +36,11 @@ Maintained by Gary Tate (W17001980)
     <header>
 
         <!-- Title *Left-Aligned* -->
-        <div class="title">
+        <!--<div class="title">
             <h1>North East Events</h1>
-        </div>
+        </div>-->
+
+        <img src="./assets/logo.svg" class="logo">
 
         <!-- Navigation *Right-Aligned* -->
         <nav>
@@ -55,7 +57,7 @@ Maintained by Gary Tate (W17001980)
     </header>
 
     <!-- Splash Background -->
-    <section class="splash">
+    <section class="landing">
         <div class="container">
 
             <h1>Book Your Events Today</h1>
