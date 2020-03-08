@@ -1,12 +1,14 @@
 /* Main Stylesheet */
 
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
 
 /* Font Variables */
-$primary_font: 'Roboto', sans-serif;
+$primary_font: 'Sen', sans-serif;
 
 /* Color Palette Variables */
-$color_primary: #ee6c4d;
-$color_secondary: #44344f;
+$color_primary: #191716;
+$color_secondary: #E0E2DB;
 
 /* Responsive Design */
 $small-width: 560px;
@@ -14,8 +16,11 @@ $centered-width: 1125px;
 $single-card: 800px;
 
 /* Global Styles */
+
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: black;
   font-family: $primary_font;
   font-size: 15px;
   line-height: 1.5;
@@ -37,53 +42,39 @@ ul {
 }
 
 header {
-  background-color: $color_secondary;
-  color: white;
-  padding-top: 20px;
-  min-height: 80px;
-  text-transform: uppercase;
+  background-color: $color_primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header a {
-  color: white;
+header li, a, button {
   text-decoration: none;
 }
 
-header .title {
-  font-size: 22px;
-  float: left;
-  @media screen and (max-width: $centered-width) {
-    float: none;
-    text-align: center;
-  }
+header h1 {
+  padding-left: 20px;
+  text-transform: uppercase;
+  color: $color_secondary;
+  font-size: 1.4em;
+  flex: 1;
+  cursor: pointer;
 }
 
-header .title h1 {
-  margin: 0;
+nav li {
+  flex: 1;
+  display: inline-block;
+  padding: 0px 20px;
 }
 
-header nav {
-  float: right;
-  margin-top: 18px;
-  @media screen and (max-width: $centered-width) {
-    float: none;
-    text-align: center;
-    padding-bottom: 30px;
-  }
+nav li a {
+  font-size: 1.1em;
+  color: $color_secondary;
+  transition: all 0.4s ease 0s;
 }
 
-header li {
-  font-size: 20px;
-  display: inline;
-  padding: 0 5px 0 5px;
-}
-
-.current {
-  color: $color_primary;
-}
-
-.navlinks a:hover {
-  color: $color_primary;
+nav li a:hover {
+  color: white;
 }
 
 .search {
