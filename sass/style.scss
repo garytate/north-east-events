@@ -17,9 +17,6 @@ $single-card: 800px;
 
 /* Global Styles */
 
-* {
-  box-sizing: border-box;
-}
 body {
   font-family: $primary_font;
   font-size: 15px;
@@ -44,18 +41,24 @@ ul {
 header {
   padding: 0;
   margin: 0;
+  height: 60px;
+  color: $color_secondary;
   background-color: $color_primary;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-header li, a, button {
-  margin: 0;
-  text-decoration: none;
-  @media (max-width: 720px) {
-    font-size: 8px;
+header img {
+  @media (max-width: 560px) {
+    display: none;
   }
+}
+
+nav a {
+  padding: 10px;
+  color: $color_secondary;
+  text-decoration: none;
 }
 
 .logo {
