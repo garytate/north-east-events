@@ -42,6 +42,8 @@ ul {
 }
 
 header {
+  padding: 0;
+  margin: 0;
   background-color: $color_primary;
   display: flex;
   justify-content: space-between;
@@ -228,6 +230,9 @@ button {
 footer {
   background-color: $color_primary;
   color: $color_secondary;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .seperator {

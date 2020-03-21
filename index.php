@@ -35,11 +35,6 @@ Maintained by Gary Tate (W17001980)
     <!-- Top Bar, Navigation + Title -->
     <header>
 
-        <!-- Title *Left-Aligned* -->
-        <!--<div class="title">
-            <h1>North East Events</h1>
-        </div>-->
-
         <img src="./assets/logo.svg" class="logo">
 
         <!-- Navigation *Right-Aligned* -->
@@ -55,15 +50,6 @@ Maintained by Gary Tate (W17001980)
             </ul>
         </nav>
     </header>
-
-    <!-- Splash Background -->
-    <section class="landing">
-        <div class="container">
-
-            <h1>Book Your Events Today</h1>
-            <h2>From as low as £20 per person.</h2>
-        </div>
-    </section>
 
     <footer>
         <p>North East Events &copy; 2019</p>

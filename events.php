@@ -34,25 +34,26 @@ Maintained by Gary Tate (W17001980)
 
     <!-- Top Bar, Navigation + Title -->
     <header>
-        <div class="container">
 
-            <!-- Title *Left-Aligned* -->
-			<h1>North East Events</h1>
+        <!-- Title *Left-Aligned* -->
+        <!--<div class="title">
+            <h1>North East Events</h1>
+        </div>-->
 
-            <!-- Navigation *Right-Aligned* -->
-            <nav>
-                <!-- Navigation Unordered List -->
-                <ul class="navlinks">
-                    <li><a href="index.php" >Home</a></li>
-                    <li><a href="events.php" class="current">Events</a></li>
-                    <li><a href="admin.php">Admin</a></li>
-                    <li><a href="#">Credits</a></li>
-                    <li><a href="./assets/pdf/Web Dev Assignment 1.pdf">Design</a></li>
-                    <li><a href="https://github.com/garytate/north-east-events"><i class="fab fa-github"></i></a></li>
-                </ul>
-            </nav>
+        <img src="./assets/logo.svg" class="logo">
 
-        </div>
+        <!-- Navigation *Right-Aligned* -->
+        <nav>
+            <!-- Navigation Unordered List -->
+            <ul class="navlinks">
+                <li><a href="index.php" class="current">Home</a></li>
+                <li><a href="events.php">Events</a></li>
+                <li><a href="admin.php">Admin</a></li>
+                <li><a href="#">Credits</a></li>
+                <li><a href="./assets/pdf/Web Dev Assignment 1.pdf">Design</a></li>
+                <li><a href="https://github.com/garytate/north-east-events"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Showcase all events -->
