@@ -84,14 +84,16 @@ Maintained by Gary Tate (W17001980)
                         // Render HTML
                         $output = 
                         '<div class="event-card">
-                            <h1>%s</h1>
-                            <div class="category">
-                                <p>%s | %s | %s</p>
+                            <div class="event-info">
+                                <h1 id="title">%s</h1>
+                                <p id="category">%s | %s | %s</p>
+                                <p id="description">%s</p>
                             </div>
-                            <p id="description">%s</p>
+                            <div class="event-buttons">
+                                <a href="event.php?eventID=%s" id="moreinfo">More Information</a>
+                                <a href="event.php" id="buyticks">Purchase Tickets</a>
+                            </div>
                         </div>
-                        <a href="event.php?eventID=%s" id="moreinfo">More Information</a>
-                        <a href="event.php" id="buyticks">Purchase Tickets</a>
                         <div class="seperator">
                         </div>';
 

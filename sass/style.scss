@@ -33,7 +33,7 @@ ul {
 /* Used throughout the website to
    hold the web page in the middle. */
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
 }
@@ -82,25 +82,6 @@ nav li a:hover {
   color: white;
 }
 
-.landing {
-  text-align: center;
-  color: white;
-  min-height: 100%;
-}
-
-.landing h2 {
-  font-size: 40px;
-  padding: 0;
-  margin: 0;
-  padding: 0 0 150px 0;
-}
-
-.landing h1 {
-  padding: 150px 0 0 0;
-  margin: 0;
-  font-size: 80px;
-}
-
 .search {
   text-align: center;
   padding: 40px 0 40px 0;
@@ -118,93 +99,49 @@ button {
 }
 
 .event-showcase {
-  background-color: white;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-card {
-  border-collapse: separate;
   align-content: center;
   text-align: center;
-  min-height: 50px;
-  width: 90%;
+  min-height: 150px;
   color: black;
   margin: 10px;
+  display: flex;
 }
 
-.event-card h1 {
-  font-size: 1.3em;
-  text-align: left;
-  padding: 10px 0 0 10px;
-  text-transform: uppercase;
+.event-info {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0 0;
 }
 
-.event-card p {
-  width: 80%;
-  margin-top: -20px;
-  text-align: left;
-  padding: 10px;
+.event-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
 }
 
-.event-card {
-    min-height: 100px;
-    background-color: white;
-}
-
-.event-card #card-price {
-  font-size: 20px;
-  color: $color_primary;
-  margin-top: -10px;
-
-  margin-bottom: 10px;
-}
-
-.event-card button {
-  margin-bottom: 20px;
-  font-size: 18px;
-  background-color: $color_primary;
-  color: white;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
-  border: 2px solid $color_primary;
-  padding: 1rem 4rem 1rem 4rem;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-.event-card button:hover {
-  color: $color_primary;
-  border: 2px solid $color_primary;
-}
-
-.event-card img {
-  width: 100%;
+.event-card #title {
   padding: 0;
+  margin: 0;
+  font-size: 2em;
+  text-align: left;
 }
 
-.category {
-  color: black;
-}
-
-.event-card h1 {
-  font-size: 30px;
-  margin: 0px 0px 10px -10px;
-  padding: 10px 10px 0 10px;
+.event-card #category {
+  margin: 0;
+  text-align: left;
 }
 
 .event-card #description {
-  padding: 0;
-  margin: 0;
-}
-
-.category p {
-  text-transform: uppercase;
-  font-size: 12px;
-  padding-bottom: 0;
+  padding: 5px;
+  margin: 0px;
+  text-align: left;
 }
 
 .newrecord {
@@ -235,7 +172,7 @@ footer {
   margin-top: 10px;
   min-height: 1px;
   max-height: 1px;
-  background-color: black;
+  background-color: $color_primary;
 }
 
 footer p {
@@ -263,10 +200,6 @@ $btn-lh: 3;
 	text-align: center;
 	text-decoration: none;
   text-transform: uppercase;
-  padding: 10px;
+  margin: 10px;
   border: none;
-}
-
-#buyticks {
-  background: $color_secondary;
 }
