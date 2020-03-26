@@ -44,10 +44,18 @@
 
 	<section class="credits">
 		<div class="container">
-		<h1>Information</h1>
+		<h1>Student Information</h1>
 		<p>Gary Tate<br>W17001980<br>me@garytate.co.uk</p>
 		<h1>Acknowledgements</h1>
 		<p><b>Company Logo</b> - Gary Tate | me@garytate.co.uk</p>
+		<p><b>Github Icon</b> - Font Awesome | https://fontawesome.com/icons/github</p>
+		<h1>Security Considerations</h1>
+		<p>The most clear issue presented is the lack of identification of those who are inputting new data into the database, this can easily be resolved by including an authentication process which can verify that whoever is inputting/removing data is someone with the appropriate credentials.
+		SQL injections are also are rather large issue surrounding dynamic websites, the best way to deal with this sort of attack is to filter and verify all inputted information to make sure they do not include SQL syntax.
+		<br><br>Storing data within your servers is an area which has became increasingly strict and regulated.
+		GDPR (General Data Protection Regulation) is a prime example, governed by the European Union, consisting on 99 articles safeguarding the privacy and information of customers who utilise your products.[https://gdpr-info.eu/]
+		All information which is sensitive, such as passwords and financial information <b>must</b> be encrypted, to avoid attacks on the website gaining direct access to customer's private information - which could provoke lawsuits and destroy reputation for the company.
+		All encryption should be salted and hashed to remove the possibility of a hash look-up table bypassing the encryption.</p>
 		</div>
 	</section>
 
