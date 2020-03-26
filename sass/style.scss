@@ -11,14 +11,8 @@ $primary_font: 'Roboto', sans-serif;
 $color_primary: #191716;
 $color_secondary: #E0E2DB;
 
-/* Responsive Design */
-$small-width: 560px;
-$centered-width: 1125px;
-$single-card: 800px;
-
-/* Global Styles */
-
 body {
+  background-color: $color_secondary;
   font-family: $primary_font;
   font-size: 15px;
   line-height: 1.5;
@@ -26,15 +20,10 @@ body {
   margin: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 /* Used throughout the website to
    hold the web page in the middle. */
 .container {
-  width: 90%;
+  width: 60%;
   margin: auto;
   overflow: hidden;
 }
@@ -65,43 +54,6 @@ nav a {
 .logo {
   padding: 5px 5px 5px 20px;
   height: 50px;
-}
-
-nav li {
-  flex: 1;
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-nav li a {
-  font-size: 1.1em;
-  color: $color_secondary;
-  transition: all 0.4s ease 0s;
-}
-
-nav li a:hover {
-  color: $color_secondary;
-}
-
-.search {
-  text-align: center;
-  padding: 40px 0 40px 0;
-  background: $color_secondary;
-  font-size: 30px;
-}
-
-.search #searchText {
-  color: $color_secondary;
-}
-
-.search input,
-button {
-  font-size: 30px;
-}
-
-.event-showcase {
-  display: flex;
-  flex-direction: column;
 }
 
 .event-card {
