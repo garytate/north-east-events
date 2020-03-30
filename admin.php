@@ -49,43 +49,67 @@ Maintained by Gary Tate (W17001980)
     </header>
 
 	<section>
-		<div class="newrecord">
-			<form action="admin/newrecord.php" method="post">
-				<p>Name:</p> <input type="text" name="name"><br>
-				<p>Description:</p> <input type="text" name="desc"><br>
-				<p>Start Date:</p> <input type="date" name="startdate"><br>
-				<p>End Date:</p> <input type="date" name="enddate"><br>
-				<p>Price (£):</p> <input type="number" step="0.01" name="price"><br>
-				<p>Category:</p> <select name="categories">
-                <?php
-                    $mysqli = include('libs/mysqli.php');
+        <div class="container">
+            <form action="admin/newrecord.php" method="post">
+                <ul class="record-container">
+                    <li>
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Event Title">
+                    </li>
+                    <li>
+                        <label>Description</label>
+                        <input type="text" name="description" placeholder="Event Description">
+                    </li>
+                    <li>
+                        <label>Start Date</label>
+                        <input type="date" name="start-date">
+                    </li>
+                    <li>
+                        <label>End Date</label>
+                        <input type="date" name="end-date">
+                    </li>
+                    <li>
+                        <label>Price</label>
+                        <input type="text" name="price">
+                    </li>
+                    <li>
+                        <label>Category</label>
+                        <select name="category">
+                        <?php
+                            $mysqli = include('libs/mysqli.php');
 
-                    $sql = "SELECT catID, catDesc FROM NEE_category";
-                    $query = $mysqli->query($sql);
-                    if ($query->num_rows > 0) {
-                        while ($row = $query->fetch_assoc()) {
-                            echo sprintf("<option value='%s'>%s</option>", $row['catID'], $row['catDesc']);
-                        }
-                    }
-                ?>
-                </select>
+                            $sql = "SELECT catID, catDesc FROM NEE_category";
+                            $query = $mysqli->query($sql);
+                            if ($query->num_rows > 0) {
+                                while ($row = $query->fetch_assoc()) {
+                                    echo sprintf("<option value='%s'>%s</option>", $row['catID'], $row['catDesc']);
+                                }
+                            }
+                        ?>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Location</label>
+                        <select name="location">
+                        <?php
+                            $mysqli = include('libs/mysqli.php');
 
-				<p>Location:</p> <select name="location">
-                <?php
-                    $mysqli = include('libs/mysqli.php');
-
-                    $sql = "SELECT venueID, venueName FROM NEE_venue";
-                    $query = $mysqli->query($sql);
-                    if ($query->num_rows > 0) {
-                        while ($row = $query->fetch_assoc()) {
-                            echo sprintf("<option value='%s'>%s</option>", $row['venueID'], $row['venueName']);
-                        }
-                    }
-                ?>
-                </select>
-				<input type="submit">
-			</form>
-		</div>
+                            $sql = "SELECT venueID, venueName FROM NEE_venue";
+                            $query = $mysqli->query($sql);
+                            if ($query->num_rows > 0) {
+                                while ($row = $query->fetch_assoc()) {
+                                    echo sprintf("<option value='%s'>%s</option>", $row['venueID'], $row['venueName']);
+                                }
+                            }
+                        ?>
+                        </select>
+                    </li>
+                    <li>
+                        <button type="submit">Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
 	</section>
 
     <footer>
