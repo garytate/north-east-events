@@ -77,16 +77,17 @@ Maintained by Gary Tate (W17001980)
                         $location_title = $result[1]; // [venueID, location]
 
                         // Date (2020-01-01)
-                        $query = "SELECT eventID, eventStartDate FROM NEE_events WHERE eventID = " . $row['eventID'];
+                        $query = "SELECT eventID, eventStartDate, eventEndDate FROM NEE_events WHERE eventID = " . $row['eventID'];
                         $result = $mysqli->query($query)->fetch_array();
-                        $date_title = $result[1]; // [eventID, eventStartDate]
+                        $date_start = $result[1]; // [eventID, eventStartDate, eventEndDate]
+                        $date_end = $result[2]; // [eventID, eventStartDate, eventEndDate]
 
                         // Render HTML
                         $output = 
                         '<div class="event-card">
                             <div class="event-info">
                                 <h1 id="title">%s</h1>
-                                <p id="category">%s | %s | %s</p>
+                                <p id="category">%s | %s | %s - %s</p>
                                 <p id="description">%s</p>
                             </div>
                             <div class="event-buttons">
@@ -97,7 +98,7 @@ Maintained by Gary Tate (W17001980)
                         <div class="seperator">
                         </div>';
 
-                        echo sprintf($output, $row['eventTitle'], $category_title, $location_title, $date_title, $row['eventDescription'], $row['eventID']);
+                        echo sprintf($output, $row['eventTitle'], $category_title, $location_title, $date_start, $date_end, $row['eventDescription'], $row['eventID']);
 
                     }
                 }
