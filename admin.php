@@ -53,8 +53,8 @@ Maintained by Gary Tate (W17001980)
             <form action="admin/newrecord.php" method="post">
                 <ul class="record-container">
                     <li>
-                        <label>Name</label>
-                        <input type="text" name="name" placeholder="Event Title">
+                        <label>Title</label>
+                        <input type="text" name="title" placeholder="Event Title">
                     </li>
                     <li>
                         <label>Description</label>

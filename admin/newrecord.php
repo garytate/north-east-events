@@ -10,7 +10,7 @@
 
 		$mysqli = include(__DIR__ . '/../libs/mysqli.php');
 
-		$query = 'INSERT INTO NEE_events (eventTitle, eventDescription, venueID, catID, eventStartDate, eventEndDate, eventPrice) VALUES ("' . $_POST["name"] . '", "' . $_POST["desc"] . '", "' . $_POST['location'] . '", "' . $_POST['categories'] . '", "' . $_POST["startdate"] . '", "' . $_POST["enddate"] . '", "' . $_POST["price"] . '");';
+		$query = 'INSERT INTO NEE_events (eventTitle, eventDescription, venueID, catID, eventStartDate, eventEndDate, eventPrice) VALUES ("' . $_POST["title"] . '", "' . $_POST["description"] . '", "' . $_POST['location'] . '", "' . $_POST['category'] . '", "' . $_POST["start-date"] . '", "' . $_POST["end-date"] . '", "' . $_POST["price"] . '");';
 		$run = $mysqli->query($query);
 	?>
 </body>
