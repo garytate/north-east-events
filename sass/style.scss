@@ -24,6 +24,9 @@ body {
    hold the web page in the middle. */
 .container {
   width: 60%;
+  @media (max-width: 1100px) {
+    width: 80%;
+  }
   margin: auto;
   overflow: hidden;
 }
@@ -63,6 +66,9 @@ nav a {
   color: $color_primary;
   margin: 10px;
   display: flex;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 }
 
 .event-info {
@@ -77,6 +83,9 @@ nav a {
   align-items: center;
   justify-content: center;
   flex: 1 0 0;
+  @media (max-width: 1100px) {
+    flex-direction: row;
+  }
 }
 
 .event-card #title {
@@ -84,17 +93,26 @@ nav a {
   margin: 0;
   font-size: 2em;
   text-align: left;
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
 }
 
 .event-card #category {
   margin: 0;
   text-align: left;
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
 }
 
 .event-card #description {
   padding: 5px;
   margin: 0px;
   text-align: left;
+  @media (max-width: 1100px) {
+    text-align: center;
+  }
 }
 
 .newrecord {
