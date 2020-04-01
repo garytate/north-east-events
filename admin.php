@@ -70,7 +70,7 @@ Maintained by Gary Tate (W17001980)
                     </li>
                     <li>
                         <label>Price</label>
-                        <input type="text" name="price">
+                        <input type="text" name="price" placeholder="29.99">
                     </li>
                     <li>
                         <label>Category</label>
