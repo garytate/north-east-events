@@ -1,6 +1,6 @@
 <!--
 North East Events - index.html
-KF4009 Assignment A (Winter 2019)
+KF4009 Assignment B (Spring 2020)
 Maintained by Gary Tate (W17001980)
 -->
 
@@ -54,6 +54,18 @@ Maintained by Gary Tate (W17001980)
 
             <?php
 
+                $icon = [
+                    'Carnival' => 'fas fa-campground',
+                    'Theatre' => 'fas fa-theater-masks',
+                    'Comedy' => 'fas fa-microphone',
+                    'Exhibition' => 'fas fa-running',
+                    'Festival' => 'far fa-compass',
+                    'Family' => 'fas fa-child',
+                    'Music' => 'fas fa-music',
+                    'Sport' => 'fas fa-swimming-pool',
+                    'Dance' => 'fas fa-glass-cheers'
+                ];
+
                 $mysqli = include('libs/mysqli.php');
 
                 $sql = "SELECT * FROM NEE_events";
@@ -85,6 +97,9 @@ Maintained by Gary Tate (W17001980)
                         // Render HTML
                         $output = 
                         '<div class="event-card">
+                            <div class="event-icon">
+                            <i id="event-icon" class="%s fa-5x"></i>
+                            </div>
                             <div class="event-info">
                                 <h1 id="title">%s</h1>
                                 <p id="category">%s | %s | %s - %s</p>
@@ -98,7 +113,7 @@ Maintained by Gary Tate (W17001980)
                         <div class="seperator">
                         </div>';
 
-                        echo sprintf($output, $row['eventTitle'], $category_title, $location_title, $date_start, $date_end, $row['eventDescription'], $row['eventID']);
+                        echo sprintf($output, $icon[$category_title], $row['eventTitle'], $category_title, $location_title, $date_start, $date_end, $row['eventDescription'], $row['eventID']);
 
                     }
                 }
@@ -113,7 +128,7 @@ Maintained by Gary Tate (W17001980)
     </section>
 
     <footer>
-        <p>North East Events &copy; 2019</p>
+        <p>North East Events &copy; 2020</p>
     </footer>
 
 </body>

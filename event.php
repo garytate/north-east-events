@@ -1,6 +1,6 @@
 <!--
 North East Events - index.html
-KF4009 Assignment A (Winter 2019)
+KF4009 Assignment B (Spring 2020)
 Maintained by Gary Tate (W17001980)
 -->
 
@@ -70,7 +70,7 @@ Maintained by Gary Tate (W17001980)
 	</section>
 
     <footer>
-        <p>North East Events &copy; 2019</p>
+        <p>North East Events &copy; 2020</p>
     </footer>
 
 </body>

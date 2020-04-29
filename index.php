@@ -1,6 +1,6 @@
 <!--
 North East Events - index.html
-KF4009 Assignment A (Winter 2019)
+KF4009 Assignment B (Spring 2020)
 Maintained by Gary Tate (W17001980)
 -->
 
@@ -46,10 +46,33 @@ Maintained by Gary Tate (W17001980)
             <a href="./assets/pdf/Web Dev Assignment 1.pdf">Design</a>
             <a href="https://github.com/garytate/north-east-events"><i class="fab fa-github"></i></a>
         </nav>
+
     </header>
 
+    <section class="intro">
+        <div class="container">
+        <div id="intro-left">
+        <p>Last day to purchase tickets</p>
+        <?php
+            $mysqli = include('libs/mysqli.php');
+            $sql = "SELECT * FROM NEE_events ORDER BY RAND() LIMIT 1";
+            $sql_query = $mysqli->query($sql);
+
+            $featured_event = $sql_query->fetch_array();
+            echo $featured_event['eventTitle'];
+        ?>
+        </div>
+        <div id="intro-right">
+        <p>Don't miss out!</p>
+        </div>
+        </div>
+
+    </section>
+
     <footer>
-        <p>North East Events &copy; 2019</p>
+
+        <p>North East Events &copy; 2020</p>
+        
     </footer>
 
 </body>

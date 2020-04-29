@@ -23,7 +23,7 @@ body {
 /* Used throughout the website to
    hold the web page in the middle. */
 .container {
-  width: 60%;
+  width: 70%;
   @media (max-width: 1100px) {
     width: 80%;
   }
@@ -59,6 +59,7 @@ nav a {
   height: 50px;
 }
 
+
 .event-card {
   align-content: center;
   text-align: center;
@@ -68,6 +69,20 @@ nav a {
   display: flex;
   @media (max-width: 1100px) {
     flex-direction: column;
+  }
+}
+
+.event-icon {
+  align-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  width: 100px;
+  @media (max-width: 1100px) {
+    padding: 0;
+    width: auto;
   }
 }
 
@@ -83,7 +98,7 @@ nav a {
   align-items: center;
   justify-content: center;
   flex: 1 0 0;
-  @media (max-width: 1100px) {
+  @media (max-width: 1100px) and (min-width: 600px) {
     flex-direction: row;
   }
 }
@@ -99,6 +114,7 @@ nav a {
 }
 
 .event-card #category {
+  font-size: 1.2em;
   margin: 0;
   text-align: left;
   @media (max-width: 1100px) {

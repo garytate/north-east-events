@@ -47,8 +47,18 @@
 		<h1>Student Information</h1>
 		<p>Gary Tate<br>W17001980<br>me@garytate.co.uk</p>
 		<h1>Acknowledgements</h1>
-		<p><b>Company Logo</b> - Gary Tate | me@garytate.co.uk</p>
-		<p><b>Github Icon</b> - Font Awesome | https://fontawesome.com/icons/github</p>
+        <p>Tate, Gary, 2020. North East Events Logo. [image] [Accessed 28 April 2020].
+        <p>Font Awesome, n.d. Github Icon. [image] Available at: https://fontawesome.com/icons/github [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Theatre Masks Icon. [image] Available at: https://fontawesome.com/icons/theater-masks [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Campground Icon. [image] Available at: https://fontawesome.com/icons/campground [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Microphone Icon. [image] Available at: https://fontawesome.com/icons/masks [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Running Icon. [image] Available at: https://fontawesome.com/icons/microphone [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Compass Icon. [image] Available at: https://fontawesome.com/icons/running [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Child Icon. [image] Available at: https://fontawesome.com/icons/compass [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Music Icon. [image] Available at: https://fontawesome.com/icons/child [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Swimming Pool Icon. [image] Available at: https://fontawesome.com/icons/music [Accessed 29 April 2020].</p>
+        <p>Font Awesome, n.d. Glass Chers Icon. [image] Available at: https://fontawesome.com/icons/swimming-pool [Accessed 29 April 2020].</p>
+
 		<h1>Security Considerations</h1>
 		<p>The most clear issue presented is the lack of identification of those who are inputting new data into the database, this can easily be resolved by including an authentication process which can verify that whoever is inputting/removing data is someone with the appropriate credentials.
 		SQL injections are also are rather large issue surrounding dynamic websites, the best way to deal with this sort of attack is to filter and verify all inputted information to make sure they do not include SQL syntax.
@@ -60,7 +70,7 @@
 	</section>
 
     <footer>
-        <p>North East Events &copy; 2019</p>
+        <p>North East Events &copy; 2020</p>
     </footer>
 
 </body>
